@@ -1,0 +1,25 @@
+.innerdiv{
+    width: 100vh;
+    height: 20vh;
+    margin: auto;
+    margin-top: 30vh;
+    
+}
+.inputtext{
+    margin: auto;
+    width: 40vh;
+
+    
+}
+.but{
+    position: relative;
+    left: 35%;
+    margin-top: 40px ;
+    width: 70px;
+}
+
+.selector{
+    margin-left: 80px;
+    
+    
+}

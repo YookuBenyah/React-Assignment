@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/react.development.js"></script>
+    <script src="js/react-dom.development.js"></script>
+    <script src="js/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="innerdiv">
+      <input id="input" class="inputtext" type="text" />
+      <button id="but1" >Get item</button>
+      <div id="root"></div>
+       
+    </div>
+    
+
+    <script type="text/jsx">
+
+       let data = [
+
+       {id:1, text: "bread"},
+       {id:2, text: "cake"},
+       {id:3, text: "coke"},
+
+       ]
+
+
+
+       function App(props) {
+        console.log(props)
+        return (
+            <div className = "container">
+                <ul>
+                    <li>{props.text} <button className="selector">delete</button> </li>
+                </ul>
+
+            </div>
+          );
+      }
+
+
+
+      let appList = data.map(i=> <App key={i.id} text={i.text} />);
+      ReactDOM.render(
+          <React.StrictMode>
+            {appList}
+          </React.StrictMode>, document.getElementById ("root")
+      );
+    </script>
+  </body>
+</html>
